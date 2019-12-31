@@ -235,7 +235,7 @@ def estimate_cnn_feat_std(cnn_feat):
         num_of_ch = feat_size[0]
         # std for each channel
         cnn_feat_std = np.zeros(num_of_ch, dtype='float32')
-        for j in xrange(num_of_ch):
+        for j in range(num_of_ch):
             feat_ch = cnn_feat[j, :, :]
             cnn_feat_std[j] = np.std(feat_ch)
         cnn_feat_std = np.mean(cnn_feat_std)  # std averaged across channels
